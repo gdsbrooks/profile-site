@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,20 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+pre {
+  background: #444;
+  color: #FFF;
+  font-family: "Roboto Mono" monospace;
+  font: weight 700;
+  padding: 10px 20px;
+  margin: 0 20px 20px;
+  width: 100%;
+}
+
+pre::before {
+  content: ">_ ";
 }
 
 /* This is the profile picture component.
@@ -73,6 +88,10 @@ It's circular with colorshifting background.
   position: relative;
   top: 15%;
   height: 105%;
+}
+
+h1 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
