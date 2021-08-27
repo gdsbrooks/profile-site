@@ -1,0 +1,73 @@
+ 
+ /* This is the profile picture component.
+ It's circular with colorshifting background. 
+ */
+ 
+  @use '../../utilities/index' as *;
+
+  
+  // VARIABLES 
+
+  
+  $size: 60vmin;
+  $color1: rgb(97, 219, 251);
+  $color2: rgb(110, 148, 250);
+  $delay: 5s; //time in seconds between rendering and animation start.
+  $duration: 60s; //duration of animation cycle. It repeats infinitely.
+
+  // MIXINS 
+  
+@mixin circular {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+  //--------------------STATIC CODE------------------------//
+
+  #profile-color-layer {
+    /* Outer wrapper div - defines size and starting colors */
+    @include circular();
+    width: $size;
+    height: $size;
+    background: 
+      linear-gradient(
+        225deg,
+        rgba($color1, 1) 30%, 
+        rgba($color1, 0) 65%
+        ),
+      linear-gradient(
+        90deg,
+        rgba($color2, 0.8) 10%,
+        rgba($color2, 0.3) 65%
+        );
+  }
+
+  @media screen and (max-width: 450px) {
+    #profile-color-layer {
+      width: 90vmin;
+      height: 90vmin
+    }
+  }
+  #hue-rotate-layer {
+    /* Animation layer. Transparent. Contains the profile picture. */
+    /* Applies backdrop-filter(hue-rotation) --to wrapper layer below-- */
+    width: inherit;
+    height: inherit;
+    @include circular();
+    @include flex-c-c;
+    background: transparent;
+    animation: hue-rotate $duration linear $delay infinite backwards;
+  }
+  @keyframes hue-rotate {
+    0% {-webkit-backdrop-filter: hue-rotate(0deg); backdrop-filter: hue-rotate(0deg);}
+    100% {-webkit-backdrop-filter: hue-rotate(359deg); backdrop-filter: hue-rotate(359deg)}
+  }
+  
+  /* Profile img. Transparent bg. */
+  #hue-rotate-layer img {
+    background: transparent;
+    /* custom position relative to container to center pictuure. */
+    position: relative;
+    top: 15%;
+    height: 105%;
+  }
