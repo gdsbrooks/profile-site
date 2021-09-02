@@ -1,8 +1,8 @@
-@use '../../utilities';
+@use '../../utilities' as *;
 
 .header {
     width: 100vw;
-    height: 4rem;
+    height: $header-height;
     position:fixed;
     top: 0;
     display: flex;
@@ -10,22 +10,50 @@
     justify-content: space-between;
     align-items: center;
     background-color: #FFF;
-    border-bottom: rgb(49, 0, 128);
-    color: #000;
+    border-bottom: .1rem solid $primary-color;
+    color: $primary-color;
     z-index: 1000;
 }
 .logo {
-    font-size: 3rem;
+    
+    margin-left: 0.5rem;
+    color: $primary-color;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.1rem;
 }
 
-.contact-deets {
-    width: 70%;
-    display: inherit;
-    flex-direction: row;;
+.contact {
+@include flex-c-c;
+flex-direction: row;
+flex-wrap: nowrap;
+    h3 {
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
 }
 
+.header-icon {
+    height: 2rem;
+    width: 2rem;
+    color: currentColor;
+    margin: 0 0.5rem;
+}
 
-@media screen and (max-width: 700px) {
-.top-cont { 
+@media screen and (max-width: 750px) {
+
+.contact h3{ 
     display: none}
 }
+@media screen and (max-width: 400px) {
+
+    .logo {
+        font-size: 2em;
+    }
+    }
+
+@media screen and (max-width: 300px) {
+
+        .contact{ 
+            display: none}
+        }
