@@ -11,6 +11,7 @@
     align-items: center;
     background-color: #FFF;
     border-bottom: .1rem solid $primary-color;
+    font-family: 'Raleway', sans-serif;
     color: $primary-color;
     z-index: 1000;
     a {
@@ -25,8 +26,8 @@
     margin-left: 0.5rem;
     color: $primary-color;
     font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: -0.1rem;
+    font-weight: 900;
+    letter-spacing: -0.05rem;
 }
 
 .contact {
@@ -54,12 +55,13 @@ flex-wrap: nowrap;
 @media screen and (max-width: 400px) {
 
     .logo {
-        font-size: 2em;
+        font-size: 2rem;
     }
-    }
-
-@media screen and (max-width: 300px) {
+}
+@media screen and (max-width: 350px) {
 
         .contact{ 
-            display: none}
+            display: none
+        }
+
         }

@@ -40,7 +40,7 @@ export default function About() {
                     <p>kind</p>
                     <p>hard-working</p>
                     <p>ready!</p>
-                    <p>George. ^1000<br/>Hi!</p>
+                    <p>George.<br/> ^1000  Hi!</p>
                 </div>
                 <div id="typed" style={{height: '7rem'}}>
                 <h1>I'm <span ref={elem} /></h1>
