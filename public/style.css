@@ -3,7 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #FFF;
+  background: none;
+}
+
+.section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 body {
@@ -23,6 +32,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 pre {
@@ -39,6 +49,36 @@ pre::before {
   content: ">_ ";
 }
 
+.header {
+  width: 100vw;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  border-bottom: #310080;
+  color: #000;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 3rem;
+}
+
+.contact-deets {
+  width: 70%;
+  display: inherit;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 700px) {
+  .top-cont {
+    display: none;
+  }
+}
 /* This is the profile picture component.
 It's circular with colorshifting background. 
 */
@@ -48,6 +88,7 @@ It's circular with colorshifting background.
   overflow: hidden;
   width: 60vmin;
   height: 60vmin;
+  border: 1px #FFF solid;
   background: linear-gradient(225deg, #61dbfb 30%, rgba(97, 219, 251, 0) 65%), linear-gradient(90deg, rgba(110, 148, 250, 0.8) 10%, rgba(110, 148, 250, 0.3) 65%);
 }
 
@@ -60,8 +101,8 @@ It's circular with colorshifting background.
 #hue-rotate-layer {
   /* Animation layer. Transparent. Contains the profile picture. */
   /* Applies backdrop-filter(hue-rotation) --to wrapper layer below-- */
-  width: inherit;
-  height: inherit;
+  width: 101%;
+  height: 101%;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -90,7 +131,41 @@ It's circular with colorshifting background.
   height: 105%;
 }
 
+.typed-cursor {
+  opacity: 1;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes typedjsBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typed {
+  background: green;
+}
+
+#about-me {
+  background-color: none;
+  height: 2000px;
+}
+
 h1 {
+  font-size: 2rem;
+  margin: 1rem;
   text-align: center;
 }
 

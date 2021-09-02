@@ -1,5 +1,13 @@
 @forward 'profile-pic';
-@forward 'ityped';
+@forward 'typed';
+
+#about-me {
+    background-color: none;
+    height: 2000px;
+    
+}
 h1 {
+    font-size: 2rem; 
+    margin: 1rem;
     text-align: center;
 }

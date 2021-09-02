@@ -1,0 +1,31 @@
+@use '../../utilities';
+
+.header {
+    width: 100vw;
+    height: 4rem;
+    position:fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    border-bottom: rgb(49, 0, 128);
+    color: #000;
+    z-index: 1000;
+}
+.logo {
+    font-size: 3rem;
+}
+
+.contact-deets {
+    width: 70%;
+    display: inherit;
+    flex-direction: row;;
+}
+
+
+@media screen and (max-width: 700px) {
+.top-cont { 
+    display: none}
+}

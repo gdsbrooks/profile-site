@@ -3,7 +3,7 @@
  It's circular with colorshifting background. 
  */
  
-  @use '../../utilities/index' as *;
+  @use '../../utilities/' as *;
 
   
   // VARIABLES 
@@ -29,6 +29,7 @@
     @include circular();
     width: $size;
     height: $size;
+    border: 1px #FFF solid;
     background: 
       linear-gradient(
         225deg,
@@ -51,8 +52,8 @@
   #hue-rotate-layer {
     /* Animation layer. Transparent. Contains the profile picture. */
     /* Applies backdrop-filter(hue-rotation) --to wrapper layer below-- */
-    width: inherit;
-    height: inherit;
+    width: 101%;
+    height: 101%;
     @include circular();
     @include flex-c-c;
     background: transparent;
