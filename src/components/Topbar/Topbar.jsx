@@ -10,8 +10,14 @@ function Topbar() {
             <div className="logo">George Brooks</div>
             <div className="contact">
                 <IconContext.Provider value={{ className: "header-icon" }}>
-                    <IoAtCircle /> <h3>george@gdsbrooks.com </h3>
-                    <IoLogoWhatsapp /> <h3>+1(206)-476-3991</h3>
+                    <a href="mailto:george@gdsbrooks.com">
+                        <IoAtCircle />
+                        <h3>george@gdsbrooks.com</h3>
+                    </a>
+                    <a href="tel:+12064763991">
+                        <IoLogoWhatsapp />
+                        <h3>+1(206)-476-3991</h3>
+                    </a>
                 </IconContext.Provider>
             </div>
         </div>

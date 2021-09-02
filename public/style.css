@@ -147,6 +147,14 @@ h1 {
   color: #3e68da;
   z-index: 1000;
 }
+.header a {
+  text-decoration: none;
+  color: #3e68da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
 .logo {
   margin-left: 0.5rem;

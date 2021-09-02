@@ -13,6 +13,12 @@
     border-bottom: .1rem solid $primary-color;
     color: $primary-color;
     z-index: 1000;
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        @include flex-c-c;
+        flex-wrap: nowrap;
+    }
 }
 .logo {
     
