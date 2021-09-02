@@ -1,3 +1,4 @@
+@use '../../utilities' as *;
 @forward 'profile-pic';
 @forward 'typed';
 
@@ -8,4 +9,10 @@ h1 {
     font-size: 2rem; 
     margin: 1rem;
     text-align: center;
+}
+
+#chevron {
+    color: $primary-color;
+    width: auto;
+    height: 5rem;
 }

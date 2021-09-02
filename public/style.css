@@ -64,8 +64,8 @@ It's circular with colorshifting background.
 
 @media screen and (max-width: 450px) {
   #profile-color-layer {
-    width: 90vmin;
-    height: 90vmin;
+    width: 85vmin;
+    height: 85vmin;
   }
 }
 #hue-rotate-layer {
@@ -132,6 +132,12 @@ h1 {
   font-size: 2rem;
   margin: 1rem;
   text-align: center;
+}
+
+#chevron {
+  color: #3e68da;
+  width: auto;
+  height: 5rem;
 }
 
 .header {

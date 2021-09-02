@@ -2,6 +2,7 @@ import { React, useEffect, useRef } from 'react'
 import headshot from './clear-bg-profile.png'
 import Typed from 'typed.js'
 import typedParams from './typedParams'
+import {IoChevronDown} from 'react-icons/io5'
 
 export default function About() {
 
@@ -24,27 +25,27 @@ export default function About() {
                     <img src={headshot} alt="Headshot of George Brooks" />
                 </div>
             </div>
-                <div id="typed-strings">
-                    <p>a developer</p>
-                    <p>a web developer</p>
-                    <p>a full stack<br />developer</p>
-                    <p>a full stack<br />web developer</p>
-                    <p>... ^500 a lot of things!</p>
-                    <p>a pharmacist</p>
-                    <p>left-handed</p>
-                    <p>a Virgo </p>
-                    <p>an immigrant</p>
-                    <p>Family 🏳️‍🌈 ^500</p>
-                    <p>friendly</p>
-                    <p>passionate</p>
-                    <p>kind</p>
-                    <p>hard-working</p>
-                    <p>ready!</p>
-                    <p>George.<br/> ^1000  Hi!</p>
-                </div>
-                <div id="typed" style={{height: '7rem'}}>
-                <h1>I'm <span ref={elem} /></h1>
+            <div id="typed-strings">
+                <p>a developer</p>
+                <p>a web developer</p>
+                <p>a full stack<br />developer</p>
+                <p>a full stack<br />web developer</p>
+                <p>... ^500 a lot of things!</p>
+                <p>a pharmacist</p>
+                <p>left-handed</p>
+                <p>a Virgo </p>
+                <p>an immigrant</p>
+                <p>Family 🏳️‍🌈 ^500</p>
+                <p>friendly</p>
+                <p>passionate</p>
+                <p>kind</p>
+                <p>hard-working</p>
+                <p>ready!</p>
+                <p>George.<br /> ^1000  Hi!</p>
             </div>
+            <div id="typed" style={{ height: '7rem' }}>
+                <h1>I'm <span ref={elem} /></h1>
+            </div>g
         </div>
 
 
