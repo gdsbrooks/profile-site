@@ -1,0 +1,34 @@
+#contact {
+    
+
+li{
+    
+    list-style: none;
+    margin: 20px;
+    padding: 5px;
+    :hover {
+        color: blueviolet;
+    }
+    :active {
+        position: relative;
+        top: 2px;
+        left: 2px;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    
+}
+
+.contact-list {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 10px;
+    
+    }
+}

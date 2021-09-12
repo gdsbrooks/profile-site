@@ -9,7 +9,7 @@
   // VARIABLES 
 
   
-  $size: 60vmin;
+  $size: 500px;
   $color1: rgb(97, 219, 251);
   $color2: rgb(110, 148, 250);
   $delay: 5s; //time in seconds between rendering and animation start.
@@ -27,9 +27,9 @@
   #profile-color-layer {
     /* Outer wrapper div - defines size and starting colors */
     @include circular();
-    width: $size;
-    height: $size;
-    border: 1px #FFF solid;
+    width: 500px;
+    height: 500px;
+    flex-shrink: 0;
     background: 
       linear-gradient(
         225deg,
@@ -43,17 +43,11 @@
         );
   }
 
-  @media screen and (max-width: 450px) {
-    #profile-color-layer {
-      width: 85vmin;
-      height: 85vmin
-    }
-  }
   #hue-rotate-layer {
     /* Animation layer. Transparent. Contains the profile picture. */
     /* Applies backdrop-filter(hue-rotation) --to wrapper layer below-- */
-    width: 101%;
-    height: 101%;
+    width: 500px;
+    height: 500px;
     @include circular();
     @include flex-c-c;
     background: transparent;
@@ -70,5 +64,12 @@
     /* custom position relative to container to center pictuure. */
     position: relative;
     top: 15%;
-    height: 105%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 450px) {
+    #profile-color-layer, #hue-rotate-layer {
+      width: 300px;
+      height: 300px;
+    }
   }

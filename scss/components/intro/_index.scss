@@ -1,0 +1,13 @@
+@use '../../utilities' as *;
+@forward 'profile-pic';
+@forward 'typed';
+
+#intro {
+    background-color: none;    
+}
+h1 {
+    font-size: 2rem; 
+    margin: 1rem;
+    text-align: center;
+}
+

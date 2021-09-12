@@ -7,23 +7,46 @@
   background: none;
 }
 
+.main {
+  height: calc(100% - 50px);
+  position: relative;
+  top: 50px;
+}
+
 .section {
   width: 100%;
-  margin: 0 auto;
+  min-height: 90vh;
+  padding: 50px 5px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+}
+.section a .chevron {
+  text-decoration: none;
+  color: #3e68da;
+  width: 70px;
+  height: auto;
+  animation: blink 1s ease 0s infinite alternate-reverse;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+div#intro.section {
+  padding-top: 5px;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.main {
-  margin-top: 4rem;
 }
 
 code {
@@ -33,6 +56,12 @@ code {
 .App {
   height: 100vh;
   width: 100vw;
+}
+
+body {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 1.5em;
 }
 
 pre {
@@ -49,6 +78,13 @@ pre::before {
   content: ">_ ";
 }
 
+.section h1 {
+  color: blueviolet;
+}
+.section h1 span {
+  color: black;
+}
+
 /* This is the profile picture component.
 It's circular with colorshifting background. 
 */
@@ -56,23 +92,17 @@ It's circular with colorshifting background.
   /* Outer wrapper div - defines size and starting colors */
   border-radius: 50%;
   overflow: hidden;
-  width: 60vmin;
-  height: 60vmin;
-  border: 1px #FFF solid;
+  width: 500px;
+  height: 500px;
+  flex-shrink: 0;
   background: linear-gradient(225deg, #61dbfb 30%, rgba(97, 219, 251, 0) 65%), linear-gradient(90deg, rgba(110, 148, 250, 0.8) 10%, rgba(110, 148, 250, 0.3) 65%);
 }
 
-@media screen and (max-width: 450px) {
-  #profile-color-layer {
-    width: 85vmin;
-    height: 85vmin;
-  }
-}
 #hue-rotate-layer {
   /* Animation layer. Transparent. Contains the profile picture. */
   /* Applies backdrop-filter(hue-rotation) --to wrapper layer below-- */
-  width: 101%;
-  height: 101%;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -98,9 +128,15 @@ It's circular with colorshifting background.
   /* custom position relative to container to center pictuure. */
   position: relative;
   top: 15%;
-  height: 105%;
+  height: 100%;
 }
 
+@media screen and (max-width: 450px) {
+  #profile-color-layer, #hue-rotate-layer {
+    width: 300px;
+    height: 300px;
+  }
+}
 .typed-cursor {
   opacity: 1;
   animation: typedjsBlink 0.7s infinite;
@@ -124,7 +160,7 @@ It's circular with colorshifting background.
     opacity: 1;
   }
 }
-#about-me {
+#intro {
   background-color: none;
 }
 
@@ -134,23 +170,73 @@ h1 {
   text-align: center;
 }
 
-#chevron {
-  color: #3e68da;
-  width: auto;
-  height: 5rem;
+h6 {
+  color: inherit;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: none;
+  margin-top: 20px;
+}
+
+.project {
+  margin: 0 20px 20px;
+  padding: 5px 0;
+  width: 300px;
+}
+.project img {
+  height: 225px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+.project p {
+  margin: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.project ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.project ul li {
+  margin: 0 5px;
+}
+.project .tech-logo {
+  height: 2rem;
+  width: 2rem;
+  margin: 2px 10px;
+}
+
+#portfolio {
+  background-color: #fff;
 }
 
 .header {
   width: 100vw;
-  height: 4rem;
+  height: 50px;
   position: fixed;
+  padding-bottom: 5px;
   top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid blueviolet;
   background-color: #FFF;
-  border-bottom: 0.1rem solid #3e68da;
   font-family: "Raleway", sans-serif;
   color: #3e68da;
   z-index: 1000;
@@ -205,6 +291,32 @@ h1 {
   .contact {
     display: none;
   }
+}
+#contact li {
+  list-style: none;
+  margin: 20px;
+  padding: 5px;
+}
+#contact li :hover {
+  color: blueviolet;
+}
+#contact li :active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+#contact li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#contact .contact-list {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

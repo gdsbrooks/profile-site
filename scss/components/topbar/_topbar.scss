@@ -4,13 +4,14 @@
     width: 100vw;
     height: $header-height;
     position:fixed;
+    padding-bottom: 5px;
     top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid blueviolet;
     background-color: #FFF;
-    border-bottom: .1rem solid $primary-color;
     font-family: 'Raleway', sans-serif;
     color: $primary-color;
     z-index: 1000;
